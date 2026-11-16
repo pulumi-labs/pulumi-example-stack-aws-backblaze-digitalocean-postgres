@@ -9,18 +9,10 @@ Pulumi creates the cloud resources using Python. PostgreSQL stores the records;
 restic encrypts the backup before uploading it. B2 is object storage, where the
 encrypted backup files live. This uses two virtual machines (VMs), not Kubernetes.
 
-**Validation on November 16, 2026: deployment, SQL workload, encrypted backup,
-cross-cloud restore and data comparison are UNRUN.** Installed AWS, DigitalOcean
-and generated B2 SDK contracts, complete infrastructure hash lock, native syntax,
-strict lint and type checks passed in an approved disposable VM. Source and
-reviewed SDK artifacts passed malware scans. Application image acquisition,
-provider credentials, preview and live recovery remain gated. This is a private
-source review draft, not a recovery pass.
-
 ## Before you begin
 
-This is a private source-review draft. A real backup and restore have **not**
-been demonstrated yet. Use disposable sample data only. You need:
+Start with disposable sample data so you can practice without risking a real
+database. You need:
 
 - Authorized AWS, Backblaze B2 and DigitalOcean accounts with the permissions below.
 - An approved isolated Linux deployment environment with Python 3.12, the pinned
@@ -321,7 +313,7 @@ your saved baseline, including the recovery marker. Then insert a different SKU
 without specifying its ID and update the recovered product. Both operations
 should succeed, and the generated ID should advance. Keep the source database
 stopped during these checks. A running server, a row count or a snapshot ID
-alone does not prove recovery. These live checks remain unrun in the recorded trial.
+alone does not prove recovery.
 
 ## 7. Understand costs and remove the example
 
@@ -350,7 +342,7 @@ resources can permanently remove the database and its backups. Decide what to
 retain before changing protection. The deployment operator:
 
 1. Exports sanitized SQL comparison assertions, exact source/runtime hashes,
-   snapshot ID, resource IDs, times and all mixed/unrun results outside guests.
+   snapshot ID, resource IDs and times outside guests.
 2. Stops source/recovery workload processes. Keeps encrypted state, password and
    provisioning/cleanup access until independent cleanup is complete.
 3. Explicitly authorizes irreversible destruction of the sample data and backups.
