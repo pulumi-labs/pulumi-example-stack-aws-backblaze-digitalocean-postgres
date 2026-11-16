@@ -1,0 +1,14 @@
+name: postgres-backup-aws-b2-digitalocean
+description: AWS PostgreSQL SQL workload, encrypted B2 logical backup, DigitalOcean recovery
+runtime:
+  name: python
+  options:
+    virtualenv: .venv
+requiredPulumiVersion: "=3.273.0"
+packages:
+  b2:
+    source: terraform-provider
+    version: 1.4.0
+    parameters:
+      - registry.opentofu.org/backblaze/b2
+      - 0.14.1

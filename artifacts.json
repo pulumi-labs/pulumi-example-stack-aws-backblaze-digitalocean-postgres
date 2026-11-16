@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "platform": "linux-amd64, CPython 3.12, Ubuntu 24.04",
+  "tools": [
+    {
+      "name": "pulumi",
+      "version": "3.273.0",
+      "url": "https://github.com/pulumi/pulumi/releases/download/v3.273.0/pulumi-v3.273.0-linux-x64.tar.gz",
+      "sha256": "ec08f86671fd58f0a186540e1cee00066393beaf5c6716b0075f690919800432"
+    },
+    {
+      "name": "pulumi-resource-aws",
+      "version": "7.52.1",
+      "url": "https://github.com/pulumi/pulumi-aws/releases/download/v7.52.1/pulumi-resource-aws-v7.52.1-linux-amd64.tar.gz",
+      "sha256": "2e705824a2103dd6e3dc66744ba2d55cad55d665476b3ffcd8ce024cf4cab081"
+    },
+    {
+      "name": "pulumi-resource-digitalocean",
+      "version": "4.84.1",
+      "url": "https://github.com/pulumi/pulumi-digitalocean/releases/download/v4.84.1/pulumi-resource-digitalocean-v4.84.1-linux-amd64.tar.gz",
+      "sha256": "593fe342d177336b00d6ea73da3d211b4bab7944070111089ec7498c7c1e7fad"
+    },
+    {
+      "name": "pulumi-resource-terraform-provider",
+      "version": "1.4.0",
+      "url": "https://github.com/pulumi/pulumi-terraform-provider/releases/download/v1.4.0/pulumi-resource-terraform-provider-v1.4.0-linux-amd64.tar.gz",
+      "sha256": "beed4a2a1a41b553c2b2c1ba40ce7a4b09232800cd7e548170dfdf44b4b98de7"
+    },
+    {
+      "name": "terraform-provider-b2",
+      "version": "0.14.1",
+      "url": "https://github.com/Backblaze/terraform-provider-b2/releases/download/v0.14.1/terraform-provider-b2_0.14.1_linux_amd64.zip",
+      "sha256": "9bbeb6d5addff2cf9600d08362ebe529d0ab8ced84c295c7b94726274e9aca73"
+    },
+    {
+      "name": "restic",
+      "version": "0.18.1",
+      "url": "https://github.com/restic/restic/releases/download/v0.18.1/restic_0.18.1_linux_amd64.bz2",
+      "sha256": "680838f19d67151adba227e1570cdd8af12c19cf1735783ed1ba928bc41f363d"
+    }
+  ],
+  "docker_packages": [
+    {
+      "name": "docker-ce",
+      "version": "5:28.5.1-1~ubuntu.24.04~noble",
+      "url": "https://download.docker.com/linux/ubuntu/dists/noble/pool/stable/amd64/docker-ce_28.5.1-1~ubuntu.24.04~noble_amd64.deb",
+      "sha256": "b52d21093c87c6dd4c4fc6548453e71ab3dd77560a7073833c2797de28e88b83",
+      "depends": "containerd.io (>= 1.7.27), docker-ce-cli, iptables, libc6 (>= 2.34), libsystemd0"
+    },
+    {
+      "name": "docker-ce-cli",
+      "version": "5:28.5.1-1~ubuntu.24.04~noble",
+      "url": "https://download.docker.com/linux/ubuntu/dists/noble/pool/stable/amd64/docker-ce-cli_28.5.1-1~ubuntu.24.04~noble_amd64.deb",
+      "sha256": "7ce6826a3d3a3ffc58b209c1681945e89a8a1ea9b2736098d1c5aad6d39fdff6",
+      "depends": "libc6 (>= 2.34)"
+    },
+    {
+      "name": "containerd.io",
+      "version": "1.7.28-1~ubuntu.24.04~noble",
+      "url": "https://download.docker.com/linux/ubuntu/dists/noble/pool/stable/amd64/containerd.io_1.7.28-1~ubuntu.24.04~noble_amd64.deb",
+      "sha256": "b138a85d566d5fc52d8d367f9bdee17b8e681ae5024fc656d6676c3988e2216f",
+      "depends": "libc6 (>= 2.38), libseccomp2 (>= 2.5.0)"
+    }
+  ],
+  "images": [
+    {
+      "reference": "docker.io/library/postgres@sha256:99d1a998c76487d3abb48b141505bda5dcf8089c0c4cd7be40f75de314fa32f0",
+      "tag_context": "17.12-bookworm",
+      "platform": "linux/amd64",
+      "provenance": "https://hub.docker.com/v2/repositories/library/postgres/tags/17.12-bookworm",
+      "security_release": "https://www.postgresql.org/docs/release/17.12/",
+      "published_at": "2026-11-12T22:16:18.645858Z",
+      "four_day_threshold": "2026-11-16T22:16:19Z",
+      "age_waiver": false,
+      "scan_reuse": "Only exact matching layer bytes and complete coverage are reusable. Image acquisition/execution remains gated; no prior image scan is claimed."
+    }
+  ]
+}
