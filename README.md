@@ -289,3 +289,9 @@ At success, failure, cancellation or the test-stop deadline, the parent:
 If SDK generation, scanned artifact staging, B2/DO signup/credentials, VM approval
 or cleanup access is unavailable, stop before paid deployment. Those prerequisites
 are external, and no live result has been fabricated for them.
+
+## License
+
+This example's authored code is licensed under the [MIT License](LICENSE) and
+is provided as-is, without warranty or a support commitment. Third-party
+components retain their own licenses and notices.
